@@ -115,9 +115,8 @@
               </h5>
               <div class="faq-content" id="faq-content-1"></div>
               <a href="https://wa.me/50256355181?text=Hola%2C%20necesito%20ayuda%20en%20el%20paso%201."
-
                 target="_blank"
-                class="btn btn-link mt-3 d-none"
+                class="btn btn-link mt-3"
                 id="faq-help-btn-1"
               >
                 Necesito más ayuda
@@ -136,7 +135,6 @@
             </p>
             
             <a href="https://wa.me/50256355181?text=Hola%2C%20necesito%20solicitar%20mi%20archivo%20de%20credenciales%20%28.ovpn%29%20para%20OpenVPN."
-
               target="_blank"
               class="btn btn-success"
               >Enviar mensaje por WhatsApp</a
@@ -157,9 +155,8 @@
               </h5>
               <div class="faq-content" id="faq-content-2"></div>
               <a href="https://wa.me/50256355181?text=Hola%2C%20necesito%20ayuda%20en%20el%20paso%202."
-
                 target="_blank"
-                class="btn btn-link mt-3 d-none"
+                class="btn btn-link mt-3"
                 id="faq-help-btn-2"
               >
                 Necesito más ayuda
@@ -251,10 +248,9 @@
               </h5>
               <div class="faq-content" id="faq-content-3"></div>
               <a
-              href="https://wa.me/50256355181?text=Hola%2C%20necesito%20ayuda%20en%20el%20paso%203."
-
+                href="https://wa.me/50256355181?text=Hola%2C%20necesito%20ayuda%20en%20el%20paso%203."
                 target="_blank"
-                class="btn btn-link mt-3 d-none"
+                class="btn btn-link mt-3"
                 id="faq-help-btn-3"
               >
                 Necesito más ayuda
@@ -278,9 +274,9 @@
               </h5>
               <div class="faq-content" id="faq-content-4"></div>
               <a 
-              href="https://wa.me/50256355181?text=Hola%2C%20necesito%20ayuda%20en%20el%20paso%204."
+                href="https://wa.me/50256355181?text=Hola%2C%20necesito%20ayuda%20en%20el%20paso%204."
                 target="_blank"
-                class="btn btn-link mt-3 d-none"
+                class="btn btn-link mt-3"
                 id="faq-help-btn-4"
               >
                 Necesito más ayuda
@@ -341,6 +337,8 @@
             renderFAQs();
           } catch (error) {
             console.error(error);
+            // Si hay un error al cargar FAQs, aún mostrar los botones de ayuda
+            renderFAQs();
           }
         };
 
@@ -356,15 +354,16 @@
           const currentFaq = faqsData.find(faq => faq.step === currentStep);
 
           if (currentFaq && currentFaq.questions.length > 0) {
-            faqHelpBtn.classList.add("d-none");
             currentFaq.questions.forEach((qa, i) => {
               faqContainer.innerHTML += `<p><strong>${i + 1}. ${qa.question}</strong><br>${qa.answer}</p>`;
             });
           } else {
             faqContainer.innerHTML = "<p>No se encontraron preguntas frecuentes para este paso.</p>";
-            faqHelpBtn.classList.remove("d-none");
-            faqHelpBtn.href = `https://wa.me/50256355181?text=Hola%2C%20necesito%20ayuda%20en%20el%20paso%20${encodeURIComponent(currentStep)}.`;
           }
+          // Asegurarse de que el botón de ayuda esté siempre visible
+          faqHelpBtn.classList.remove("d-none");
+          // Actualizar el href del botón de ayuda dinámicamente
+          faqHelpBtn.href = `https://wa.me/50256355181?text=Hola%2C%20necesito%20ayuda%20en%20el%20paso%20${encodeURIComponent(currentStep)}.`;
         };
 
         document.addEventListener("click", e => {
