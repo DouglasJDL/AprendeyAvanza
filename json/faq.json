@@ -1,0 +1,169 @@
+{
+    "faqs": [
+      {
+        "step": 1,
+        "title": "Preguntas Frecuentes - Paso 1",
+        "questions": [
+          {
+            "question": "¿Qué pasa si no tengo espacio en mi dispositivo?",
+            "answer": "Libera espacio eliminando aplicaciones o archivos innecesarios."
+          },
+          {
+            "question": "¿Por qué no encuentro la aplicación en Play Store?",
+            "answer": "Asegúrate de buscar con el nombre exacto o revisa la compatibilidad de tu dispositivo. Si no la encuentras, comunícate con Métodos y Procesos por WhatsApp al 56355181."
+          },
+          {
+            "question": "¿Puedo usar otra aplicación de VPN?",
+            "answer": "Sí, pero recomendamos usar OpenVPN Connect para garantizar compatibilidad."
+          },
+          {
+            "question": "¿Es obligatorio descargar ambas aplicaciones?",
+            "answer": "Sí, ambas son necesarias para completar el proceso."
+          },
+          {
+            "question": "¿Qué hago si el enlace no funciona?",
+            "answer": "Intenta copiar y pegar el enlace en tu navegador."
+          },
+          {
+            "question": "¿Por qué mi dispositivo no me permite instalar la aplicación?",
+            "answer": "Verifica que tienes habilitada la opción de instalar aplicaciones de fuentes externas en la configuración de seguridad de tu dispositivo."
+          },
+          {
+            "question": "¿Necesito una cuenta en Google para descargar la aplicación?",
+            "answer": "Sí, es necesario tener una cuenta de Google activa en tu dispositivo para descargar aplicaciones desde Play Store."
+          },
+          {
+            "question": "¿Qué hago si la instalación de la aplicación se detiene?",
+            "answer": "Verifica tu conexión a Internet y asegúrate de tener suficiente espacio de almacenamiento en el dispositivo."
+          },
+          {
+            "question": "¿Cómo actualizo una aplicación instalada?",
+            "answer": "Abre Play Store, busca la aplicación y selecciona 'Actualizar' si está disponible."
+          },
+          {
+            "question": "¿Por qué mi aplicación no se abre después de la instalación?",
+            "answer": "Reinicia tu dispositivo y asegúrate de que tu sistema operativo esté actualizado. Si el problema persiste, contacta a Soporte Técnico."
+          }
+        ]
+      },      
+      {
+        "step": 2,
+        "title": "Preguntas Frecuentes - Paso 2",
+        "questions": [
+          {
+            "question": "¿A quién debo contactar?",
+            "answer": "Al departamento de Métodos y través del enlace proporcionado en Enviar 'Mensaje por Whatsapp'."
+          },
+          {
+            "question": "¿Cuánto tiempo tarda en llegar mi archivo?",
+            "answer": "Generalmente, en un plazo de 24 horas."
+          },
+          {
+            "question": "¿Qué hago si no recibo respuesta?",
+            "answer": "Intenta comunicarte nuevamente o llama a Metodos u Procesos a travez del PBX: 79654900 ext 48."
+          },
+          {
+            "question": "¿Necesito algo adicional al archivo .ovpn?",
+            "answer": "Sí, también necesitas el usuario y contraseña que te proporcionarán."
+          },
+          {
+            "question": "¿Puedo usar mi cuenta personal?",
+            "answer": "No, necesitas las credenciales asignadas por la corporación."
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "title": "Preguntas Frecuentes - Paso 3",
+        "questions": [
+          {
+            "question": "¿Qué hago si no puedo importar el perfil?",
+            "answer": "Verifica que el archivo esté en formato .ovpn y sea el correcto."
+          },
+          {
+            "question": "¿Por qué no se conecta a la red?",
+            "answer": "Asegúrate de que las credenciales sean correctas y tengas acceso a internet."
+          },
+          {
+            "question": "¿Qué pasa si olvido mi contraseña?",
+            "answer": "Contacta a Métodos y Procesos para restablecerla."
+          },
+          {
+            "question": "¿Cuántos dispositivos puedo conectar?",
+            "answer": "Un dispositvo."
+          },
+          {
+            "question": "¿Qué hago si el archivo .ovpn no se abre?",
+            "answer": "Asegúrate de tener instalada la aplicación OpenVPN Connect. Si el problema persiste, comunícate con Métodos y Procesos."
+          },
+          {
+            "question": "¿Puedo recibir el archivo .ovpn por correo electrónico?",
+            "answer": "El archivo generalmente se envía por WhatsApp. Si tienes problemas para recibirlo, contacta a Métodos y Procesos."
+          },
+          {
+            "question": "¿Es posible usar el archivo .ovpn en otros dispositivos?",
+            "answer": "No, puedes usar el archivo .ovpn en un solo dispositivo"
+          },
+          {
+            "question": "¿Puedo cambiar mi usuario y contraseña asignados de OpenVPN?",
+            "answer": "No, los usuarios y contraseñas están asignados de manera fija por el departamento de Métodos y Procesos."
+          },
+          {
+            "question": "¿Cómo sé si la conexión VPN está funcionando correctamente?",
+            "answer": "Cuando el indicador se pone verde en la aplicación OpenVPN Connect, significa que la conexión se ha establecido correctamente."
+          },
+          {
+            "question": "¿Qué debo hacer si la conexión VPN se cae o no funciona?",
+            "answer": "Verifica tu conexión a Internet. Si el problema persiste, revisa las configuraciones de la VPN o contacta a Métodos y Procesos."
+          },
+          {
+            "question": "¿Puedo usar cualquier aplicación de VPN para conectar?",
+            "answer": "Si. pero te recomendamos usar OpenVPN Connect para evitar problemas de compatibilidad."
+          },
+          {
+            "question": "¿El archivo .ovpn caduca?",
+            "answer": "El archivo .ovpn no caduca, pero las credenciales pueden ser modificadas o revocadas por el departamento de Métodos y Procesos en caso de cambios."
+          },
+          {
+            "question": "¿Qué hago si no entiendo cómo usar OpenVPN Connect?",
+            "answer": "Puedes consultar la sección Referencias Visuales o contactar a Métodos y Procesos para recibir asistencia."
+          },
+          {
+            "question": "¿Puedo compartir mi archivo .ovpn con otros usuarios?",
+            "answer": "No, el archivo .ovpn y las credenciales son personales y deben usarse únicamente por el usuario asignado."
+          },
+          {
+            "question": "¿El archivo .ovpn contiene información sensible?",
+            "answer": "Sí, contiene configuraciones que permiten establecer una conexión segura. Es importante no compartirlo con personas no autorizadas."
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "title": "Preguntas Frecuentes - Paso 4",
+        "questions": [
+          {
+            "question": "¿A quién debo contactar para soporte adicional?",
+            "answer": "Al equipo de Métodos y Procesos a través del número o correo proporcionado."
+          },
+          {
+            "question": "¿Puedo volver a solicitar las credenciales?",
+            "answer": "Sí, si has perdido el archivo o las credenciales, solicita nuevamente."
+          },
+          {
+            "question": "¿Qué hago si el sistema no funciona correctamente?",
+            "answer": "Reinicia el dispositivo y verifica los pasos realizados."
+          },
+          {
+            "question": "¿Puedo compartir mis credenciales con otros?",
+            "answer": "No, las credenciales son personales y no deben compartirse."
+          },
+          {
+            "question": "¿Cómo verifico que todo esté funcionando?",
+            "answer": "Intenta acceder a los recursos de la corporación para confirmar la conexión."
+          }
+        ]
+      }
+    ]
+  }
+  

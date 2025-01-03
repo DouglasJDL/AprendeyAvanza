@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guía de Instalación para Nuevos Empleados</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .error-message {
+        color: red;
+        font-size: 0.9rem;
+        display: none;
+      }
+      .faq-content {
+        display: none;
+      }
+      .carousel-counter {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 3px;
+      }
+      .carousel-item img {
+        max-height: 400px;
+        object-fit: contain;
+        cursor: pointer; /* Cambiar el cursor para indicar que es clicable */
+      }
+
+      /* Cambiar color de las flechas */
+      .carousel-indicators .active {
+        background-color: darkblue;
+      }
+      .carousel-indicators button:not(.active) {
+        background-color: rgb(76, 87, 241);
+      }
+      #step-navigation,
+      #step-content,
+      #btn-prev,
+      #btn-next,
+      #btn-restart {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <header class="bg-primary text-white text-center py-3">
+      <h1>Guía de Instalación</h1>
+    </header>
+
+    <main class="container my-4">
+      <div class="card" id="intro-content">
+        <div class="card-body text-center">
+          <h2 class="card-title">¡Comencemos!</h2>
+          <p>
+            Esta guía te ayudará a instalar y configurar las aplicaciones
+            necesarias para utilizar Aprende y Avanza (LMS).
+          </p>
+          <button class="btn btn-primary mt-3" id="btn-start">Comenzar</button>
+        </div>
+      </div>
+
+      <ul class="nav nav-pills justify-content-center mb-4" id="step-navigation">
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" id="step-1">Paso 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" id="step-2">Paso 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" id="step-3">Paso 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" id="step-4">Paso 4</a>
+        </li>
+      </ul>
+
+      <div id="step-content">
+        <!-- PASO 1 -->
+        <div class="card" id="content-1">
+          <div class="card-body">
+            <h2 class="card-title">Paso 1: Descargar Aplicaciones</h2>
+            <p>Descarga las siguientes aplicaciones desde la Play Store:</p>
+            <ul>
+              <li>
+                <a href="https://play.google.com/store/apps/details?id=net.openvpn.openvpn&hl=es" target="_blank">
+                  OpenVPN Connect
+                </a>
+              </li>
+              <li>
+                <a href="https://play.google.com/store/apps/details?id=com.corporacionavanza.lms" target="_blank">
+                  Corporación Avanza LMS
+                </a>
+              </li>
+            </ul>
+            <div class="form-check mt-3">
+              <input type="checkbox" class="form-check-input" id="step1-check" />
+              <label for="step1-check" class="form-check-label">
+                He descargado las aplicaciones necesarias
+              </label>
+            </div>
+            <span class="error-message" id="step1-error">
+              Por favor, marca esta opción para continuar.
+            </span>
+
+            <div class="mt-3">
+              <h5 class="fw-bold faq-header d-flex align-items-center" style="cursor: pointer;">
+                Preguntas Frecuentes <span class="ms-2 faq-toggle-icon">▼</span>
+              </h5>
+              <div class="faq-content" id="faq-content-1"></div>
+              <a
+                href="https://wa.me/?text=Hola,%20necesito%20ayuda%20en%20el%20paso%201."
+                target="_blank"
+                class="btn btn-link mt-3 d-none"
+                id="faq-help-btn-1"
+              >
+                Necesito más ayuda
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASO 2 -->
+        <div class="card d-none" id="content-2">
+          <div class="card-body">
+            <h2 class="card-title">Paso 2: Solicitar Credenciales</h2>
+            <p>
+              Contacta al departamento de Métodos y Soporte para obtener tu archivo
+              .ovpn, usuario y contraseña.
+            </p>
+            <a
+              href="https://wa.me/?text=Hola,%20necesito%20solicitar%20mi%20archivo%20de%20credenciales%20(.ovpn)%20para%20OpenVPN."
+              target="_blank"
+              class="btn btn-success"
+              >Enviar mensaje por WhatsApp</a
+            >
+            <div class="form-check mt-3">
+              <input type="checkbox" class="form-check-input" id="step2-check" />
+              <label for="step2-check" class="form-check-label">
+                He solicitado mis credenciales
+              </label>
+            </div>
+            <span class="error-message" id="step2-error">
+              Por favor, marca esta opción para continuar.
+            </span>
+
+            <div class="mt-3">
+              <h5 class="fw-bold faq-header d-flex align-items-center" style="cursor: pointer;">
+                Preguntas Frecuentes <span class="ms-2 faq-toggle-icon">▼</span>
+              </h5>
+              <div class="faq-content" id="faq-content-2"></div>
+              <a
+                href="https://wa.me/?text=Hola,%20necesito%20ayuda%20en%20el%20paso%202."
+                target="_blank"
+                class="btn btn-link mt-3 d-none"
+                id="faq-help-btn-2"
+              >
+                Necesito más ayuda
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASO 3 -->
+        <div class="card d-none" id="content-3">
+          <div class="card-body">
+            <h2 class="card-title">Paso 3: Configurar OpenVPN</h2>
+            <ol>
+              <li>Importar perfil .ovpn.</li>
+              <li>Configura las credenciales y conecta OpenVPN</li>
+              <li>Inicia Sesión en Aprende y Avanza (LMS)</li>
+            </ol>
+            <p class="text-muted small">
+              HAZ CLICK SOBRE LA IMAGEN PARA VER EN TAMAÑO COMPLETO.
+            </p>
+
+            <div class="mt-3">
+              <h5 class="fw-bold">Referencias Visuales</h5>
+              <div id="carouselOpenVPN" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <!-- Indicadores actualizados para 7 imágenes -->
+                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active position-relative">
+                    <img src="img/1.jpg" class="d-block w-100" alt="OpenVPN Paso 1" />
+                    <div class="carousel-counter">1 / 7</div>
+                  </div>
+                  <div class="carousel-item position-relative">
+                    <img src="img/2.jpg" class="d-block w-100" alt="OpenVPN Paso 2" />
+                    <div class="carousel-counter">2 / 7</div>
+                  </div>
+                  <div class="carousel-item position-relative">
+                    <img src="img/3.jpg" class="d-block w-100" alt="OpenVPN Paso 3" />
+                    <div class="carousel-counter">3 / 7</div>
+                  </div>
+                  <div class="carousel-item position-relative">
+                    <img src="img/4.jpg" class="d-block w-100" alt="OpenVPN Paso 4" />
+                    <div class="carousel-counter">4 / 7</div>
+                  </div>
+                  <div class="carousel-item position-relative">
+                    <img src="img/5.jpg" class="d-block w-100" alt="OpenVPN Paso 5" />
+                    <div class="carousel-counter">5 / 7</div>
+                  </div>
+                  <div class="carousel-item position-relative">
+                    <img src="img/6.jpg" class="d-block w-100" alt="OpenVPN Paso 6" />
+                    <div class="carousel-counter">6 / 7</div>
+                  </div>
+                  <div class="carousel-item position-relative">
+                    <img src="img/7.jpg" class="d-block w-100" alt="OpenVPN Paso 7" />
+                    <div class="carousel-counter">7 / 7</div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselOpenVPN" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselOpenVPN" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Siguiente</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-check mt-3">
+              <input type="checkbox" class="form-check-input" id="step3-check" />
+              <label for="step3-check" class="form-check-label">
+                He configurado OpenVPN y accedido a Aprende y Avanza correctamente
+              </label>
+            </div>
+            <span class="error-message" id="step3-error">
+              Por favor, marca esta opción para continuar.
+            </span>
+
+            <div class="mt-3">
+              <h5 class="fw-bold faq-header d-flex align-items-center" style="cursor: pointer;">
+                Preguntas Frecuentes <span class="ms-2 faq-toggle-icon">▼</span>
+              </h5>
+              <div class="faq-content" id="faq-content-3"></div>
+              <a
+                href="https://wa.me/?text=Hola,%20necesito%20ayuda%20en%20el%20paso%203."
+                target="_blank"
+                class="btn btn-link mt-3 d-none"
+                id="faq-help-btn-3"
+              >
+                Necesito más ayuda
+              </a>
+            </div>
+          </div>
+        </div>
+      
+        <!-- PASO 4 -->
+        <div class="card d-none" id="content-4">
+          <div class="card-body">
+            <h2 class="card-title">Paso 4: Finalizar</h2>
+            <p>
+              ¡Configuración completa! Ahora estás listo para comenzar a realizar los cursos de Aprende y Avanza (LMS). Si necesitas ayuda adicional, no dudes en contactar al equipo
+              de Métodos y Procesos.
+            </p>
+
+            <div class="mt-3">
+              <h5 class="fw-bold faq-header d-flex align-items-center" style="cursor: pointer;">
+                Preguntas Frecuentes <span class="ms-2 faq-toggle-icon">▼</span>
+              </h5>
+              <div class="faq-content" id="faq-content-4"></div>
+              <a
+                href="https://wa.me/?text=Hola,%20necesito%20ayuda%20en%20el%20paso%204."
+                target="_blank"
+                class="btn btn-link mt-3 d-none"
+                id="faq-help-btn-4"
+              >
+                Necesito más ayuda
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between mt-3">
+        <button class="btn btn-secondary mb-2 mb-sm-0" id="btn-prev" disabled>Atrás</button>
+        <button class="btn btn-primary mb-2 mb-sm-0" id="btn-next">Siguiente</button>
+        <button class="btn btn-danger mb-2 mb-sm-0" id="btn-restart">Reiniciar</button>
+      </div>
+    </main>
+
+    <footer class="bg-primary text-white text-center py-3">
+      <p>© 2024 - Corporación Avanza, S.A. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal para ver imágenes en tamaño completo -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="imageModalLabel">Imagen en tamaño completo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="" id="modalImage" class="img-fluid" alt="Imagen completa">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle (con Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const totalSteps = 4;
+        let currentStep = parseInt(localStorage.getItem("currentStep")) || 0;
+        let faqsData = [];
+
+        const btnPrev = document.getElementById("btn-prev"),
+          btnNext = document.getElementById("btn-next"),
+          btnRestart = document.getElementById("btn-restart");
+
+        const stepNav = document.getElementById("step-navigation"),
+          stepContent = document.getElementById("step-content"),
+          introContent = document.getElementById("intro-content"),
+          startBtn = document.getElementById("btn-start");
+
+        const loadFAQs = async () => {
+          try {
+            const response = await fetch("json/faq.json");
+            if (!response.ok) throw new Error("Error al cargar FAQs.");
+            faqsData = (await response.json()).faqs;
+            renderFAQs();
+          } catch (error) {
+            console.error(error);
+          }
+        };
+
+        const renderFAQs = () => {
+          if (currentStep === 0) return;
+
+          const faqContainer = document.getElementById(`faq-content-${currentStep}`);
+          const faqHelpBtn = document.getElementById(`faq-help-btn-${currentStep}`);
+
+          if (!faqContainer || !faqHelpBtn) return;
+
+          faqContainer.innerHTML = "";
+          const currentFaq = faqsData.find(faq => faq.step === currentStep);
+
+          if (currentFaq && currentFaq.questions.length > 0) {
+            faqHelpBtn.classList.add("d-none");
+            currentFaq.questions.forEach((qa, i) => {
+              faqContainer.innerHTML += `<p><strong>${i + 1}. ${qa.question}</strong><br>${qa.answer}</p>`;
+            });
+          } else {
+            faqContainer.innerHTML = "<p>No se encontraron preguntas frecuentes para este paso.</p>";
+            faqHelpBtn.classList.remove("d-none");
+            faqHelpBtn.href = `https://wa.me/?text=Hola,%20necesito%20ayuda%20en%20el%20paso%20${currentStep}.`;
+          }
+        };
+
+        document.addEventListener("click", e => {
+          if (e.target.classList.contains("faq-header") || e.target.closest(".faq-header")) {
+            const header = e.target.classList.contains("faq-header") ? e.target : e.target.closest(".faq-header");
+            const content = header.nextElementSibling;
+            const icon = header.querySelector(".faq-toggle-icon");
+            if (content) {
+              content.style.display = content.style.display === "block" ? "none" : "block";
+              icon.textContent = content.style.display === "block" ? "▲" : "▼";
+            }
+          }
+        });
+
+        btnNext.addEventListener("click", () => {
+          if (currentStep === 0) return; // Evitar avanzar si aún está en el contenido de introducción
+
+          const checkbox = document.getElementById(`step${currentStep}-check`);
+          const errorMsg = document.getElementById(`step${currentStep}-error`);
+          if (checkbox && !checkbox.checked) {
+            errorMsg.style.display = "block";
+            // Desplazar la vista al mensaje de error
+            errorMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+          } else {
+            if (errorMsg) errorMsg.style.display = "none";
+            if (currentStep < totalSteps) {
+              localStorage.setItem("currentStep", ++currentStep);
+              updateSteps();
+            }
+          }
+        });
+
+        btnPrev.addEventListener("click", () => {
+          if (currentStep > 1) {
+            localStorage.setItem("currentStep", --currentStep);
+            updateSteps();
+          }
+        });
+
+        btnRestart.addEventListener("click", () => {
+          localStorage.removeItem("currentStep");
+          currentStep = 0;
+          document.querySelectorAll("input[type='checkbox']").forEach(chk => (chk.checked = false));
+          updateSteps();
+        });
+
+        startBtn.addEventListener("click", () => {
+          localStorage.setItem("currentStep", (currentStep = 1));
+          updateSteps();
+        });
+
+        const updateSteps = () => {
+          if (currentStep === 0) {
+            introContent.style.display = "block";
+            stepNav.style.display = "none";
+            stepContent.style.display = "none";
+            btnPrev.style.display = "none";
+            btnNext.style.display = "none";
+            btnRestart.style.display = "none";
+          } else {
+            introContent.style.display = "none";
+            stepNav.style.display = "flex";
+            stepContent.style.display = "block";
+            btnPrev.style.display = "inline-block";
+            btnNext.style.display = "inline-block";
+            btnRestart.style.display = "inline-block";
+            for (let i = 1; i <= totalSteps; i++) {
+              const navLink = document.getElementById(`step-${i}`);
+              const contentCard = document.getElementById(`content-${i}`);
+              navLink.classList.remove("active", "disabled", "text-success");
+              if (i < currentStep) {
+                navLink.classList.add("text-success");
+              } else if (i === currentStep) {
+                navLink.classList.add("active");
+              } else {
+                navLink.classList.add("disabled");
+              }
+              if (contentCard) {
+                contentCard.classList.toggle("d-none", i !== currentStep);
+              }
+            }
+            btnPrev.disabled = currentStep === 1;
+            btnNext.disabled = currentStep === totalSteps;
+            renderFAQs();
+          }
+        };
+
+        // Cargar FAQs y actualizar los pasos
+        loadFAQs();
+        updateSteps();
+
+        // Funcionalidad para abrir imágenes en tamaño completo
+        const carouselImages = document.querySelectorAll('.carousel-item img');
+        const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+        const modalImage = document.getElementById('modalImage');
+        const imageModalLabel = document.getElementById('imageModalLabel');
+
+        carouselImages.forEach(img => {
+          img.addEventListener('click', () => {
+            modalImage.src = img.src;
+            modalImage.alt = img.alt;
+            imageModalLabel.textContent = img.alt;
+            imageModal.show();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
