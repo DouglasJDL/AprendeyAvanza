@@ -1,485 +1,913 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guía de Instalación para Nuevos Empleados</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      .error-message {
-        color: red;
-        font-size: 0.9rem;
-        display: none;
-      }
-      .faq-content {
-        display: none;
-      }
-      .carousel-counter {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        background: rgba(0, 0, 0, 0.6);
-        color: #fff;
-        padding: 5px 10px;
-        border-radius: 3px;
-      }
-      .carousel-item img {
-        max-height: 400px;
-        object-fit: contain;
-        cursor: pointer; /* Cambiar el cursor para indicar que es clicable */
-      }
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="generator" content="StepShot" />
+    <meta name="theme-color" content="#cf3918" />
+    <title>Sistema de Gestión del Aprendizaje</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body data-theme="light">
 
-      /* Cambiar color de las flechas */
-      .carousel-indicators .active {
-        background-color: darkblue;
-      }
-      .carousel-indicators button:not(.active) {
-        background-color: rgb(76, 87, 241);
-      }
-      /* Cambiar color de la flecha anterior */
-      .carousel-control-prev-icon {
-          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='blue' viewBox='0 0 8 8'%3E%3Cpath d='M4.146 0.146a.5.5 0 011 .5v7a.5.5 0 01-.708.708L0.146 4.854a.5.5 0 010-.708L4.146.146z'/%3E%3C/svg%3E");
-      }
-
-      /* Cambiar color de la flecha siguiente */
-      .carousel-control-next-icon {
-          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='blue' viewBox='0 0 8 8'%3E%3Cpath d='M3.854 0.146a.5.5 0 00-.708.708v7a.5.5 0 10.708-.708L7.854 4.854a.5.5 0 000-.708L3.854.146z'/%3E%3C/svg%3E");
-      }
-
-      #step-navigation,
-      #step-content,
-      #btn-prev,
-      #btn-next,
-      #btn-restart {
-        display: none;
-      }
-    </style>
-  </head>
-  <body class="bg-light">
-    <header class="bg-primary text-white text-center py-3">
-      <h1>Guía de Instalación</h1>
-    </header>
-
-    <main class="container my-4">
-      <div class="card" id="intro-content">
-        <div class="card-body text-center">
-          <h2 class="card-title">¡Comencemos!</h2>
-          <p>
-            Esta guía te ayudará a instalar y configurar las aplicaciones
-            necesarias para utilizar Aprende y Avanza (LMS).
-          </p>
-          <button class="btn btn-primary mt-3" id="btn-start">Comenzar</button>
-        </div>
-      </div>
-
-      <ul class="nav nav-pills justify-content-center mb-4" id="step-navigation">
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" id="step-1">Paso 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" id="step-2">Paso 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" id="step-3">Paso 3</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" id="step-4">Paso 4</a>
-        </li>
-      </ul>
-
-      <div id="step-content">
-        <!-- PASO 1 -->
-        <div class="card" id="content-1">
-          <div class="card-body">
-            <h2 class="card-title">Paso 1: Descargar Aplicaciones</h2>
-            <p>Descarga las siguientes aplicaciones desde la Play Store:</p>
-            <ul>
-              <li>
-                <a href="https://play.google.com/store/apps/details?id=net.openvpn.openvpn&hl=es" target="_blank">
-                  OpenVPN Connect
-                </a>
-              </li>
-              <li>
-                <a href="https://play.google.com/store/apps/details?id=com.corporacionavanza.lms" target="_blank">
-                  Aprende y Avanza (LMS)
-                </a>
-              </li>
-            </ul>
-            <div class="form-check mt-3">
-              <input type="checkbox" class="form-check-input" id="step1-check" />
-              <label for="step1-check" class="form-check-label">
-                He descargado las aplicaciones necesarias
-              </label>
-            </div>
-            <span class="error-message" id="step1-error">
-              Por favor, marca esta opción para continuar.
-            </span>
-
-            <div class="mt-3">
-              <h5 class="fw-bold faq-header d-flex align-items-center" style="cursor: pointer;">
-                Preguntas Frecuentes <span class="ms-2 faq-toggle-icon">▼</span>
-              </h5>
-              <div class="faq-content" id="faq-content-1"></div>
-              <a href="https://wa.me/50256355181?text=Hola%2C%20necesito%20ayuda%20en%20el%20paso%201."
-                target="_blank"
-                class="btn btn-link mt-3"
-                id="faq-help-btn-1"
-              >
-                Necesito más ayuda
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- PASO 2 -->
-        <div class="card d-none" id="content-2">
-          <div class="card-body">
-            <h2 class="card-title">Paso 2: Solicitar Credenciales</h2>
-            <p>
-              Contacta al departamento de Métodos y Soporte para obtener tu archivo
-              .ovpn, usuario y contraseña.
-            </p>
-            
-            <a href="https://wa.me/50256355181?text=Hola%2C%20necesito%20solicitar%20mi%20archivo%20de%20credenciales%20%28.ovpn%29%20para%20OpenVPN."
-              target="_blank"
-              class="btn btn-success"
-              >Enviar mensaje por WhatsApp</a
-            >
-            <div class="form-check mt-3">
-              <input type="checkbox" class="form-check-input" id="step2-check" />
-              <label for="step2-check" class="form-check-label">
-                He solicitado mis credenciales
-              </label>
-            </div>
-            <span class="error-message" id="step2-error">
-              Por favor, marca esta opción para continuar.
-            </span>
-
-            <div class="mt-3">
-              <h5 class="fw-bold faq-header d-flex align-items-center" style="cursor: pointer;">
-                Preguntas Frecuentes <span class="ms-2 faq-toggle-icon">▼</span>
-              </h5>
-              <div class="faq-content" id="faq-content-2"></div>
-              <a href="https://wa.me/50256355181?text=Hola%2C%20necesito%20ayuda%20en%20el%20paso%202."
-                target="_blank"
-                class="btn btn-link mt-3"
-                id="faq-help-btn-2"
-              >
-                Necesito más ayuda
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- PASO 3 -->
-        <div class="card d-none" id="content-3">
-          <div class="card-body">
-            <h2 class="card-title">Paso 3: Configurar OpenVPN</h2>
-            <ol>
-              <li>Importar perfil .ovpn.</li>
-              <li>Configura las credenciales y conecta OpenVPN</li>
-              <li>Inicia Sesión en Aprende y Avanza (LMS)</li>
-            </ol>
-            <p class="text-muted small">
-              HAZ CLICK SOBRE LA IMAGEN PARA VER EN TAMAÑO COMPLETO.
-            </p>
-
-            <div class="mt-3">
-              <h5 class="fw-bold">Referencias Visuales</h5>
-              <div id="carouselOpenVPN" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <!-- Indicadores actualizados para 7 imágenes -->
-                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                  <button type="button" data-bs-target="#carouselOpenVPN" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active position-relative">
-                    <img src="img/1.jpg" class="d-block w-100" alt="OpenVPN Paso 1" />
-                    <div class="carousel-counter">1 / 7</div>
-                  </div>
-                  <div class="carousel-item position-relative">
-                    <img src="img/2.jpg" class="d-block w-100" alt="OpenVPN Paso 2" />
-                    <div class="carousel-counter">2 / 7</div>
-                  </div>
-                  <div class="carousel-item position-relative">
-                    <img src="img/3.jpg" class="d-block w-100" alt="OpenVPN Paso 3" />
-                    <div class="carousel-counter">3 / 7</div>
-                  </div>
-                  <div class="carousel-item position-relative">
-                    <img src="img/4.jpg" class="d-block w-100" alt="OpenVPN Paso 4" />
-                    <div class="carousel-counter">4 / 7</div>
-                  </div>
-                  <div class="carousel-item position-relative">
-                    <img src="img/5.jpg" class="d-block w-100" alt="OpenVPN Paso 5" />
-                    <div class="carousel-counter">5 / 7</div>
-                  </div>
-                  <div class="carousel-item position-relative">
-                    <img src="img/6.jpg" class="d-block w-100" alt="OpenVPN Paso 6" />
-                    <div class="carousel-counter">6 / 7</div>
-                  </div>
-                  <div class="carousel-item position-relative">
-                    <img src="img/7.jpg" class="d-block w-100" alt="OpenVPN Paso 7" />
-                    <div class="carousel-counter">7 / 7</div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselOpenVPN" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselOpenVPN" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Siguiente</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="form-check mt-3">
-              <input type="checkbox" class="form-check-input" id="step3-check" />
-              <label for="step3-check" class="form-check-label">
-                He configurado OpenVPN y accedido a Aprende y Avanza correctamente
-              </label>
-            </div>
-            <span class="error-message" id="step3-error">
-              Por favor, marca esta opción para continuar.
-            </span>
-
-            <div class="mt-3">
-              <h5 class="fw-bold faq-header d-flex align-items-center" style="cursor: pointer;">
-                Preguntas Frecuentes <span class="ms-2 faq-toggle-icon">▼</span>
-              </h5>
-              <div class="faq-content" id="faq-content-3"></div>
-              <a
-                href="https://wa.me/50256355181?text=Hola%2C%20necesito%20ayuda%20en%20el%20paso%203."
-                target="_blank"
-                class="btn btn-link mt-3"
-                id="faq-help-btn-3"
-              >
-                Necesito más ayuda
-              </a>
-            </div>
-          </div>
-        </div>
-      
-        <!-- PASO 4 -->
-        <div class="card d-none" id="content-4">
-          <div class="card-body">
-            <h2 class="card-title">Paso 4: Finalizar</h2>
-            <p>
-              ¡Configuración completa! Ahora estás listo para comenzar a realizar los cursos de Aprende y Avanza (LMS). Si necesitas ayuda adicional, no dudes en contactar al equipo
-              de Métodos y Procesos.
-            </p>
-
-            <div class="mt-3">
-              <h5 class="fw-bold faq-header d-flex align-items-center" style="cursor: pointer;">
-                Preguntas Frecuentes <span class="ms-2 faq-toggle-icon">▼</span>
-              </h5>
-              <div class="faq-content" id="faq-content-4"></div>
-              <a 
-                href="https://wa.me/50256355181?text=Hola%2C%20necesito%20ayuda%20en%20el%20paso%204."
-                target="_blank"
-                class="btn btn-link mt-3"
-                id="faq-help-btn-4"
-              >
-                Necesito más ayuda
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="d-flex flex-column flex-sm-row justify-content-between mt-3">
-        <button class="btn btn-secondary mb-2 mb-sm-0" id="btn-prev" disabled>Atrás</button>
-        <button class="btn btn-primary mb-2 mb-sm-0" id="btn-next">Siguiente</button>
-        <button class="btn btn-danger mb-2 mb-sm-0" id="btn-restart">Reiniciar</button>
-      </div>
-    </main>
-
-    <footer class="bg-primary text-white text-center py-3">
-      <p>© 2024 - Corporación Avanza, S.A. Todos los derechos reservados.</p>
-    </footer>
-
-    <!-- Modal para ver imágenes en tamaño completo -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="imageModalLabel">Imagen en tamaño completo</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body text-center">
-            <img src="" id="modalImage" class="img-fluid" alt="Imagen completa">
-          </div>
-        </div>
-      </div>
+    <div class="reading-progress" aria-hidden="true">
+        <div class="reading-progress-fill" id="readingProgress"></div>
     </div>
 
-    <!-- Bootstrap Bundle (con Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const totalSteps = 4;
-        let currentStep = parseInt(localStorage.getItem("currentStep")) || 0;
-        let faqsData = [];
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
 
-        const btnPrev = document.getElementById("btn-prev"),
-          btnNext = document.getElementById("btn-next"),
-          btnRestart = document.getElementById("btn-restart");
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
 
-        const stepNav = document.getElementById("step-navigation"),
-          stepContent = document.getElementById("step-content"),
-          introContent = document.getElementById("intro-content"),
-          startBtn = document.getElementById("btn-start");
+    <div class="overlay" id="overlay" aria-hidden="true"></div>
 
-        const loadFAQs = async () => {
-          try {
-            const response = await fetch("json/faq.json");
-            if (!response.ok) throw new Error("Error al cargar FAQs.");
-            faqsData = (await response.json()).faqs;
-            renderFAQs();
-          } catch (error) {
-            console.error(error);
-            // Si hay un error al cargar FAQs, aún mostrar los botones de ayuda
-            renderFAQs();
-          }
-        };
+    <aside class="sidebar" id="sidebar" aria-label="Tabla de contenidos">
+        <div class="sidebar-inner">
+            <div class="sidebar-brand">
+                <div class="brand-mark"></div>
+                <div class="brand-text">
+                    <div class="brand-eyebrow">Guía interactiva</div>
+                    <div class="brand-title">Sistema de Gestión del Aprendizaje</div>
+                </div>
+            </div>
 
-        const renderFAQs = () => {
-          if (currentStep === 0) return;
+            <div class="sidebar-search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="search" id="searchInput" placeholder="Buscar paso..." aria-label="Buscar paso" />
+            </div>
 
-          const faqContainer = document.getElementById(`faq-content-${currentStep}`);
-          const faqHelpBtn = document.getElementById(`faq-help-btn-${currentStep}`);
+            <nav class="toc" aria-label="Navegación">
+                <div class="toc-label">Contenido</div>
+                <ol class="toc-list" id="tocList"></ol>
+            </nav>
 
-          if (!faqContainer || !faqHelpBtn) return;
+            <div class="sidebar-footer">
+                <div class="sidebar-actions">
+                    <button type="button" class="sidebar-action" id="expandAll">Expandir todo</button>
+                    <button type="button" class="sidebar-action" id="collapseAll">Colapsar todo</button>
+                </div>
+                <div class="step-counter">
+                    <strong id="totalSteps">0</strong>
+                    <span>pasos totales</span>
+                </div>
+            </div>
+        </div>
+    </aside>
 
-          faqContainer.innerHTML = "";
-          const currentFaq = faqsData.find(faq => faq.step === currentStep);
+    <main class="main">
+        <header class="hero">
+            <div class="hero-pattern" aria-hidden="true"></div>
+            <div class="hero-content">
+                <div class="hero-eyebrow">
+                    <span class="hero-dot"></span>
+                    Guía paso a paso
+                </div>
+                <h1 class="hero-title">Sistema de Gestión del Aprendizaje</h1>
+                
+                <div class="hero-meta">
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-value" id="statSteps">0</div>
+                            <div class="stat-label">Pasos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value" id="statSections">0</div>
+                            <div class="stat-label">Secciones</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value" id="statTime">0</div>
+                            <div class="stat-label">Min lectura</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-          if (currentFaq && currentFaq.questions.length > 0) {
-            currentFaq.questions.forEach((qa, i) => {
-              faqContainer.innerHTML += `<p><strong>${i + 1}. ${qa.question}</strong><br>${qa.answer}</p>`;
-            });
-          } else {
-            faqContainer.innerHTML = "<p>No se encontraron preguntas frecuentes para este paso.</p>";
-          }
-          // Asegurarse de que el botón de ayuda esté siempre visible
-          faqHelpBtn.classList.remove("d-none");
-          // Actualizar el href del botón de ayuda dinámicamente
-          faqHelpBtn.href = `https://wa.me/50256355181?text=Hola%2C%20necesito%20ayuda%20en%20el%20paso%20${encodeURIComponent(currentStep)}.`;
-        };
+        <article class="content" id="content">
+            
 
-        document.addEventListener("click", e => {
-          if (e.target.classList.contains("faq-header") || e.target.closest(".faq-header")) {
-            const header = e.target.classList.contains("faq-header") ? e.target : e.target.closest(".faq-header");
-            const content = header.nextElementSibling;
-            const icon = header.querySelector(".faq-toggle-icon");
-            if (content) {
-              content.style.display = content.style.display === "block" ? "none" : "block";
-              icon.textContent = content.style.display === "block" ? "▲" : "▼";
-            }
-          }
-        });
+            <section class="accordion" data-accordion-index="0" id="anchor-0">
+                    <button type="button" class="accordion-trigger" aria-expanded="false">
+                        <div class="accordion-trigger-left">
+                            <div class="accordion-trigger-num">1</div>
+                            <div class="accordion-trigger-text">
+                                <div class="accordion-trigger-eyebrow">Sección 1</div>
+                                <h2 class="accordion-trigger-title"><span class='section-heading'>Descargar/Actualizar Aplicaciones</span></h2></div>
+                        </div>
+                        <div class="accordion-trigger-right">
+                            <span class="accordion-count">1 pasos</span>
+                            <span class="accordion-chevron" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </div>
+                    </button>
+                    <div class="accordion-panel">
+                        <div class="accordion-panel-inner">
+                            
+                            <section class="step-card" id="anchor-1" data-type="step" data-step-index="1" data-section-index="1">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">1.1</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Ingresa a Play Store</h3>
+                                        <div class="step-description"><p> </p><p>Ingresa a Play Store y busca las siguientes aplicaciones, o presiona sobre los nombres para abrir directamente:</p><p>-<a href="https://play.google.com/store/apps/details?id=com.corporacionavanza.lms">Aprende y Avanza (LMS)</a></p><p><a href="https://play.google.com/store/apps/details?id=net.openvpn.openvpn">-OpenVPN Connect</a></p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_1.jpg" data-alt="Ingresa a Play Store  
+Ingresa a Play Store y busca las siguientes aplicaciones, o presiona sobre los nombres para abrir directamente:
 
-        btnNext.addEventListener("click", () => {
-          if (currentStep === 0) return; // Evitar avanzar si aún está en el contenido de introducción
+-Aprende y Avanza (LMS)
+-OpenVPN Connect
+">
+                                                    <img src="images\ii3FY_1.jpg" alt="{{stepAltText0}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section>
+                        </div>
+                    </div>
+                </section><section class="accordion" data-accordion-index="1" id="anchor-2">
+                    <button type="button" class="accordion-trigger" aria-expanded="false">
+                        <div class="accordion-trigger-left">
+                            <div class="accordion-trigger-num">2</div>
+                            <div class="accordion-trigger-text">
+                                <div class="accordion-trigger-eyebrow">Sección 2</div>
+                                <h2 class="accordion-trigger-title"><span class='section-heading'>Configurar OpenVPN Connect</span></h2></div>
+                        </div>
+                        <div class="accordion-trigger-right">
+                            <span class="accordion-count">5 pasos</span>
+                            <span class="accordion-chevron" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </div>
+                    </button>
+                    <div class="accordion-panel">
+                        <div class="accordion-panel-inner">
+                            
+                            <section class="step-card" id="anchor-3" data-type="step" data-step-index="1" data-section-index="2">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">2.1</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Credenciales</h3>
+                                        <div class="step-description"><p>Recibirás tus archivos de configuración. Antes debes tener instalado OpenVPN.</p><p>1. Archivo de configuración</p><p>2. Usuario (Username) y contraseña (Password)</p><p>Presiona sobre el archivo (1) para iniciar la configuración.</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_2.jpg" data-alt=" Credenciales  Recibirás tus archivos de configuración. Antes debes tener instalado OpenVPN.
+1. Archivo de configuración
+2. Usuario (Username) y contraseña (Password)
+Presiona sobre el archivo (1) para iniciar la configuración.
+">
+                                                    <img src="images\ii3FY_2.jpg" alt="{{stepAltText1}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-4" data-type="step" data-step-index="2" data-section-index="2">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">2.2</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Abrir archivo</h3>
+                                        <div class="step-description"><p>Selecciona la opción "Abrir con OpenVPN Connect" (1). Confirma presionando "Solo una vez" o "Siempre" (2) </p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_3.jpg" data-alt=" Abrir archivo  Selecciona la opción Abrir con OpenVPN Connect (1). Confirma presionando Solo una vez o Siempre (2) ">
+                                                    <img src="images\ii3FY_3.jpg" alt="{{stepAltText2}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-5" data-type="step" data-step-index="3" data-section-index="2">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">2.3</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Importar configuración</h3>
+                                        <div class="step-description"><p>Al abrir la aplicación, selecciona OK en la pantalla de confirmación </p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_4.jpg" data-alt="Importar configuración  Al abrir la aplicación, selecciona OK en la pantalla de confirmación ">
+                                                    <img src="images\ii3FY_4.jpg" alt="{{stepAltText3}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-6" data-type="step" data-step-index="4" data-section-index="2">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">2.4</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Configurar Username y Password</h3>
+                                        <div class="step-description"><p> </p><p>1. En el campo username ingresa el usuario recibido</p><p>2. Marca la casilla "Save Password"</p><p>3. En el campo password ingresa la contraseña</p><p>4. Confirma presionando "CONNECT" </p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_5.jpg" data-alt=" Configurar Username y Password   
+1. En el campo username ingresa el usuario recibido
+2. Marca la casilla Save Password
+3. En el campo password ingresa la contraseña
+4. Confirma presionando CONNECT ">
+                                                    <img src="images\ii3FY_5.jpg" alt="{{stepAltText4}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-7" data-type="step" data-step-index="5" data-section-index="2">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">2.5</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Conexión realizada</h3>
+                                        <div class="step-description"><p> </p><p>El cambio a color verde indicará que la conexión está realizada correctamente.</p><p>1. Puedes apagar la conexión VPN presionando sobre el switch de color verde</p><p>Mantén la conexión activa mientras utilizas la aplicación</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_6.jpg" data-alt="Conexión realizada  
+El cambio a color verde indicará que la conexión está realizada correctamente.
+1. Puedes apagar la conexión VPN presionando sobre el switch de color verde
+Mantén la conexión activa mientras utilizas la aplicación
+">
+                                                    <img src="images\ii3FY_6.jpg" alt="{{stepAltText5}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section>
+                        </div>
+                    </div>
+                </section><section class="accordion" data-accordion-index="2" id="anchor-8">
+                    <button type="button" class="accordion-trigger" aria-expanded="false">
+                        <div class="accordion-trigger-left">
+                            <div class="accordion-trigger-num">3</div>
+                            <div class="accordion-trigger-text">
+                                <div class="accordion-trigger-eyebrow">Sección 3</div>
+                                <h2 class="accordion-trigger-title"><span class='section-heading'>Conectar VPN</span></h2></div>
+                        </div>
+                        <div class="accordion-trigger-right">
+                            <span class="accordion-count">3 pasos</span>
+                            <span class="accordion-chevron" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </div>
+                    </button>
+                    <div class="accordion-panel">
+                        <div class="accordion-panel-inner">
+                            
+                            <section class="step-card" id="anchor-9" data-type="step" data-step-index="1" data-section-index="3">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">3.1</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Abre la aplicación OpenVPN</h3>
+                                        
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_7.jpg" data-alt="Abre la aplicación OpenVPN ">
+                                                    <img src="images\ii3FY_7.jpg" alt="{{stepAltText6}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-10" data-type="step" data-step-index="2" data-section-index="3">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">3.2</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Conectar VPN</h3>
+                                        <div class="step-description"><p>Presiona sobre el botón interruptor (Switch) de color gris</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_8.jpg" data-alt="Conectar VPN Presiona sobre el botón interruptor (Switch) de color gris">
+                                                    <img src="images\ii3FY_8.jpg" alt="{{stepAltText7}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-11" data-type="step" data-step-index="3" data-section-index="3">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">3.3</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">VPN Activa</h3>
+                                        <div class="step-description"><p>El cambio de color a verde indica que está activa. Mantén la VPN activa mientras utilizas la aplicación. Cuando termines, presiona nuevamente el mismo botón para desactivarla.</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_9.jpg" data-alt="VPN Activa El cambio de color a verde indica que está activa. Mantén la VPN activa mientras utilizas la aplicación. Cuando termines, presiona nuevamente el mismo botón para desactivarla.">
+                                                    <img src="images\ii3FY_9.jpg" alt="{{stepAltText8}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section>
+                        </div>
+                    </div>
+                </section><section class="accordion" data-accordion-index="3" id="anchor-12">
+                    <button type="button" class="accordion-trigger" aria-expanded="false">
+                        <div class="accordion-trigger-left">
+                            <div class="accordion-trigger-num">4</div>
+                            <div class="accordion-trigger-text">
+                                <div class="accordion-trigger-eyebrow">Sección 4</div>
+                                <h2 class="accordion-trigger-title"><span class='section-heading'>Primer inicio Aprende y Avanza</span></h2></div>
+                        </div>
+                        <div class="accordion-trigger-right">
+                            <span class="accordion-count">4 pasos</span>
+                            <span class="accordion-chevron" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </div>
+                    </button>
+                    <div class="accordion-panel">
+                        <div class="accordion-panel-inner">
+                            
+                            <section class="step-card" id="anchor-13" data-type="step" data-step-index="1" data-section-index="4">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">4.1</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Abre la aplicación Aprende y Avanza</h3>
+                                        
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_10.jpg" data-alt="Abre la aplicación Aprende y Avanza ">
+                                                    <img src="images\ii3FY_10.jpg" alt="{{stepAltText9}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-14" data-type="step" data-step-index="2" data-section-index="4">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">4.2</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Autoriza las notificaciones</h3>
+                                        
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_11.jpg" data-alt="Autoriza las notificaciones ">
+                                                    <img src="images\ii3FY_11.jpg" alt="{{stepAltText10}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-15" data-type="step" data-step-index="3" data-section-index="4">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">4.3</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Continúa con el siguiente paso</h3>
+                                        
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_12.jpg" data-alt="Continúa con el siguiente paso ">
+                                                    <img src="images\ii3FY_12.jpg" alt="{{stepAltText11}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-16" data-type="step" data-step-index="4" data-section-index="4">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">4.4</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Selecciona Iniciar sesión</h3>
+                                        
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_13.jpg" data-alt="Selecciona Iniciar sesión ">
+                                                    <img src="images\ii3FY_13.jpg" alt="{{stepAltText12}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section>
+                        </div>
+                    </div>
+                </section><section class="accordion" data-accordion-index="4" id="anchor-17">
+                    <button type="button" class="accordion-trigger" aria-expanded="false">
+                        <div class="accordion-trigger-left">
+                            <div class="accordion-trigger-num">5</div>
+                            <div class="accordion-trigger-text">
+                                <div class="accordion-trigger-eyebrow">Sección 5</div>
+                                <h2 class="accordion-trigger-title"><span class='section-heading'>Iniciar sesión con Google</span></h2></div>
+                        </div>
+                        <div class="accordion-trigger-right">
+                            <span class="accordion-count">2 pasos</span>
+                            <span class="accordion-chevron" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </div>
+                    </button>
+                    <div class="accordion-panel">
+                        <div class="accordion-panel-inner">
+                            
+                            <section class="step-card" id="anchor-18" data-type="step" data-step-index="1" data-section-index="5">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">5.1</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Selecciona la opción Google</h3>
+                                        <div class="step-description"><p>En el apartado de Login, selecciona el icono de Google "G"</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_14.jpg" data-alt="Selecciona la opción Google En el apartado de Login, selecciona el icono de Google G">
+                                                    <img src="images\ii3FY_14.jpg" alt="{{stepAltText13}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-19" data-type="step" data-step-index="2" data-section-index="5">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">5.2</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Selecciona tu cuenta</h3>
+                                        <div class="step-description"><p>Si tienes varias cuentas asociadas a tu dispositivo, selecciona el correo que usaste al registrarte. Después de elegir el correo ingresarás automáticamente a la aplicación.</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_15.jpg" data-alt="Selecciona tu cuenta Si tienes varias cuentas asociadas a tu dispositivo, selecciona el correo que usaste al registrarte. Después de elegir el correo ingresarás automáticamente a la aplicación.">
+                                                    <img src="images\ii3FY_15.jpg" alt="{{stepAltText14}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section>
+                        </div>
+                    </div>
+                </section><section class="accordion" data-accordion-index="5" id="anchor-20">
+                    <button type="button" class="accordion-trigger" aria-expanded="false">
+                        <div class="accordion-trigger-left">
+                            <div class="accordion-trigger-num">6</div>
+                            <div class="accordion-trigger-text">
+                                <div class="accordion-trigger-eyebrow">Sección 6</div>
+                                <h2 class="accordion-trigger-title"><span class='section-heading'>Iniciar sesión con correo o teléfono</span></h2></div>
+                        </div>
+                        <div class="accordion-trigger-right">
+                            <span class="accordion-count">1 pasos</span>
+                            <span class="accordion-chevron" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </div>
+                    </button>
+                    <div class="accordion-panel">
+                        <div class="accordion-panel-inner">
+                            
+                            <section class="step-card" id="anchor-21" data-type="step" data-step-index="1" data-section-index="6">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">6.1</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Iniciar sesión</h3>
+                                        <div class="step-description"><p>Selecciona la opción:</p><p>1. Correo electrónico</p><p>2. Teléfono</p><p>3. Ingresa los datos y presiona el botón Iniciar sesión para acceder a la aplicación.</p><p>4. Si olvidaste tu contraseña, selecciona la opción "Olvidé mi contraseña" para restablecerla. Elige el método: correo o teléfono.</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_16.jpg" data-alt="Iniciar sesión Selecciona la opción:
+1. Correo electrónico
+2. Teléfono
+3. Ingresa los datos y presiona el botón Iniciar sesión para acceder a la aplicación.
+4. Si olvidaste tu contraseña, selecciona la opción Olvidé mi contraseña para restablecerla. Elige el método: correo o teléfono.">
+                                                    <img src="images\ii3FY_16.jpg" alt="{{stepAltText15}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section>
+                        </div>
+                    </div>
+                </section><section class="accordion" data-accordion-index="6" id="anchor-22">
+                    <button type="button" class="accordion-trigger" aria-expanded="false">
+                        <div class="accordion-trigger-left">
+                            <div class="accordion-trigger-num">7</div>
+                            <div class="accordion-trigger-text">
+                                <div class="accordion-trigger-eyebrow">Sección 7</div>
+                                <h2 class="accordion-trigger-title"><span class='section-heading'>Mi progreso</span></h2></div>
+                        </div>
+                        <div class="accordion-trigger-right">
+                            <span class="accordion-count">1 pasos</span>
+                            <span class="accordion-chevron" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </div>
+                    </button>
+                    <div class="accordion-panel">
+                        <div class="accordion-panel-inner">
+                            
+                            <section class="step-card" id="anchor-23" data-type="step" data-step-index="1" data-section-index="7">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">7.1</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Contenido</h3>
+                                        <div class="step-description"><p>En este apartado verás:</p><p>1. Progreso general de todos los paquetes y cursos asignados</p><p>2. Aprobados: Cantidad de cursos aprobados del total asignado</p><p>3. Certificados: Cantidad de certificados obtenidos del total disponible. Puedes presionar sobre esta tarjeta para descargar tus certificados</p><p>4. Evaluaciones: Cantidad de evaluaciones aprobadas del total asignado</p><p>5. Paquete de cursos: Paquetes asignados con un % general. Al presionarlos puedes ver el detalle de cada curso que contiene</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_17.jpg" data-alt="Contenido En este apartado verás:
+1. Progreso general de todos los paquetes y cursos asignados
+2. Aprobados: Cantidad de cursos aprobados del total asignado
+3. Certificados: Cantidad de certificados obtenidos del total disponible. Puedes presionar sobre esta tarjeta para descargar tus certificados
+4. Evaluaciones: Cantidad de evaluaciones aprobadas del total asignado
+5. Paquete de cursos: Paquetes asignados con un % general. Al presionarlos puedes ver el detalle de cada curso que contiene">
+                                                    <img src="images\ii3FY_17.jpg" alt="{{stepAltText16}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section>
+                        </div>
+                    </div>
+                </section><section class="accordion" data-accordion-index="7" id="anchor-24">
+                    <button type="button" class="accordion-trigger" aria-expanded="false">
+                        <div class="accordion-trigger-left">
+                            <div class="accordion-trigger-num">8</div>
+                            <div class="accordion-trigger-text">
+                                <div class="accordion-trigger-eyebrow">Sección 8</div>
+                                <h2 class="accordion-trigger-title"><span class='section-heading'>Realizar un curso</span></h2></div>
+                        </div>
+                        <div class="accordion-trigger-right">
+                            <span class="accordion-count">4 pasos</span>
+                            <span class="accordion-chevron" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </div>
+                    </button>
+                    <div class="accordion-panel">
+                        <div class="accordion-panel-inner">
+                            
+                            <section class="step-card" id="anchor-25" data-type="step" data-step-index="1" data-section-index="8">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">8.1</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Selecciona un curso</h3>
+                                        <div class="step-description"><p>1. Dirígete al tab Mi progreso</p><p>2. Presiona sobre el paquete para desplegar los cursos</p><p>3. Selecciona el curso a realizar</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_18.jpg" data-alt="Selecciona un curso 1. Dirígete al tab Mi progreso
+2. Presiona sobre el paquete para desplegar los cursos
+3. Selecciona el curso a realizar">
+                                                    <img src="images\ii3FY_18.jpg" alt="{{stepAltText17}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-26" data-type="step" data-step-index="2" data-section-index="8">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">8.2</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Detalle del curso</h3>
+                                        <div class="step-description"><p>Puedes ver detalles generales del curso. Para acceder a la página de aprendizaje presiona "Continuar curso"</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_19.jpg" data-alt="Detalle del curso Puedes ver detalles generales del curso. Para acceder a la página de aprendizaje presiona Continuar curso">
+                                                    <img src="images\ii3FY_19.jpg" alt="{{stepAltText18}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-27" data-type="step" data-step-index="3" data-section-index="8">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">8.3</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Página de aprendizaje</h3>
+                                        <div class="step-description"><p>Dentro obtendrás la siguiente información:</p><p>1. Detalle de avance incluyendo el %</p><p>2. Última lección visitada: puedes reanudar rápidamente la última sesión visitada al presionar sobre este apartado</p><p>3. Puedes visitar secciones específicas presionando sobre ellas. Se desplegará el detalle de cada sección y puedes presionar sobre la lección para ingresar al detalle</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_20.jpg" data-alt="Página de aprendizaje Dentro obtendrás la siguiente información:
+1. Detalle de avance incluyendo el %
+2. Última lección visitada: puedes reanudar rápidamente la última sesión visitada al presionar sobre este apartado
+3. Puedes visitar secciones específicas presionando sobre ellas. Se desplegará el detalle de cada sección y puedes presionar sobre la lección para ingresar al detalle">
+                                                    <img src="images\ii3FY_20.jpg" alt="{{stepAltText19}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-28" data-type="step" data-step-index="4" data-section-index="8">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">8.4</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Detalle de lección</h3>
+                                        <div class="step-description"><p>Al ingresar a una lección puedes visualizar su contenido.</p><p>1. Información técnica: Tipo de lección, fecha e información adicional</p><p>2. Contenido de la lección: puede ser texto, video, imagen, diapositivas, contenido externo u otro</p><p>3. He leído esta lección: Utilízala para marcar tu progreso. Por defecto, cuando permaneces cierto tiempo en una lección se marca automáticamente</p><p>4. Botones de navegación: Utilízalos para continuar con la siguiente lección o regresar a la lección anterior</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_21.jpg" data-alt="Detalle de lección Al ingresar a una lección puedes visualizar su contenido.
+1. Información técnica: Tipo de lección, fecha e información adicional
+2. Contenido de la lección: puede ser texto, video, imagen, diapositivas, contenido externo u otro
+3. He leído esta lección: Utilízala para marcar tu progreso. Por defecto, cuando permaneces cierto tiempo en una lección se marca automáticamente
+4. Botones de navegación: Utilízalos para continuar con la siguiente lección o regresar a la lección anterior">
+                                                    <img src="images\ii3FY_21.jpg" alt="{{stepAltText20}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section>
+                        </div>
+                    </div>
+                </section><section class="accordion" data-accordion-index="8" id="anchor-29">
+                    <button type="button" class="accordion-trigger" aria-expanded="false">
+                        <div class="accordion-trigger-left">
+                            <div class="accordion-trigger-num">9</div>
+                            <div class="accordion-trigger-text">
+                                <div class="accordion-trigger-eyebrow">Sección 9</div>
+                                <h2 class="accordion-trigger-title"><span class='section-heading'>Realizar una evaluación</span></h2></div>
+                        </div>
+                        <div class="accordion-trigger-right">
+                            <span class="accordion-count">9 pasos</span>
+                            <span class="accordion-chevron" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </div>
+                    </button>
+                    <div class="accordion-panel">
+                        <div class="accordion-panel-inner">
+                            
+                            <section class="step-card" id="anchor-30" data-type="step" data-step-index="1" data-section-index="9">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">9.1</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Accede al tab Mi progreso</h3>
+                                        <div class="step-description"><p>1. Accede al Tab Mi progreso</p><p>2. Dentro selecciona el curso en el cual realizar la evaluación</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_22.jpg" data-alt="Accede al tab Mi progreso 1. Accede al Tab Mi progreso
+2. Dentro selecciona el curso en el cual realizar la evaluación">
+                                                    <img src="images\ii3FY_22.jpg" alt="{{stepAltText21}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-31" data-type="step" data-step-index="2" data-section-index="9">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">9.2</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Detalle del curso</h3>
+                                        <div class="step-description"><p>Selecciona "Continuar al curso"</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_23.jpg" data-alt="Detalle del curso Selecciona Continuar al curso">
+                                                    <img src="images\ii3FY_23.jpg" alt="{{stepAltText22}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-32" data-type="step" data-step-index="3" data-section-index="9">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">9.3</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Selecciona la evaluación</h3>
+                                        <div class="step-description"><p>Al presionar la tarjeta de continuar lección, se indicará si la evaluación está disponible. Si todas las lecciones están aprobadas, se mostrará el Quiz y el nombre de la evaluación para ingresar.</p><p>Si no tienes todas las lecciones aprobadas, se mostrará la lección pendiente de realizar. Ingresa y completa la lección marcándola como "He leído esta lección". Una vez realizado, podrás visualizar el Quiz</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_24.jpg" data-alt="Selecciona la evaluación Al presionar la tarjeta de continuar lección, se indicará si la evaluación está disponible. Si todas las lecciones están aprobadas, se mostrará el Quiz y el nombre de la evaluación para ingresar.
+Si no tienes todas las lecciones aprobadas, se mostrará la lección pendiente de realizar. Ingresa y completa la lección marcándola como He leído esta lección. Una vez realizado, podrás visualizar el Quiz">
+                                                    <img src="images\ii3FY_24.jpg" alt="{{stepAltText23}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-33" data-type="step" data-step-index="4" data-section-index="9">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">9.4</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Realiza la evaluación</h3>
+                                        <div class="step-description"><p>En la lección de Quiz, selecciona la opción "Ir al Quiz"</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_25.jpg" data-alt="Realiza la evaluación En la lección de Quiz, selecciona la opción Ir al Quiz">
+                                                    <img src="images\ii3FY_25.jpg" alt="{{stepAltText24}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-34" data-type="step" data-step-index="5" data-section-index="9">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">9.5</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Selecciona la evaluación</h3>
+                                        <div class="step-description"><p>Al ingresar, las evaluaciones están de acuerdo al color:</p><p>Azul: Evaluación nueva sin ningún intento realizado</p><p>Amarillo: Evaluación con uno o más intentos reprobados</p><p>Rojo: Evaluación sin intentos disponibles</p><p>Selecciona la evaluación presionando sobre su nombre</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_26.jpg" data-alt="Selecciona la evaluación Al ingresar, las evaluaciones están de acuerdo al color:
+Azul: Evaluación nueva sin ningún intento realizado
+Amarillo: Evaluación con uno o más intentos reprobados
+Rojo: Evaluación sin intentos disponibles
+Selecciona la evaluación presionando sobre su nombre">
+                                                    <img src="images\ii3FY_26.jpg" alt="{{stepAltText25}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-35" data-type="step" data-step-index="6" data-section-index="9">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">9.6</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Detalle de la evaluación</h3>
+                                        <div class="step-description"><p>Dentro obtendrás detalles como:</p><p>1. Información de la evaluación: puntuación necesaria, tiempo límite asignado, reintentos disponibles</p><p>2. Iniciar: Botón para comenzar la evaluación</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_27.jpg" data-alt="Detalle de la evaluación Dentro obtendrás detalles como:
+1. Información de la evaluación: puntuación necesaria, tiempo límite asignado, reintentos disponibles
+2. Iniciar: Botón para comenzar la evaluación">
+                                                    <img src="images\ii3FY_27.jpg" alt="{{stepAltText26}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-36" data-type="step" data-step-index="7" data-section-index="9">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">9.7</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Respondiendo evaluación</h3>
+                                        <div class="step-description"><p>Al iniciar una evaluación encontrarás:</p><p>1. Tiempo restante para completar la evaluación</p><p>2. Preguntas completadas y pendientes</p><p>3. Pregunta y sus posibles respuestas. Selecciona al menos una respuesta para poder continuar</p><p>4. Navegación: Botones anterior y siguiente para navegar en la evaluación</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_28.jpg" data-alt="Respondiendo evaluación Al iniciar una evaluación encontrarás:
+1. Tiempo restante para completar la evaluación
+2. Preguntas completadas y pendientes
+3. Pregunta y sus posibles respuestas. Selecciona al menos una respuesta para poder continuar
+4. Navegación: Botones anterior y siguiente para navegar en la evaluación">
+                                                    <img src="images\ii3FY_28.jpg" alt="{{stepAltText27}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-37" data-type="step" data-step-index="8" data-section-index="9">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">9.8</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Enviar evaluación</h3>
+                                        <div class="step-description"><p>Al llegar a la última pregunta, el botón "Finalizar" de color rojo será visible. Presionalo para completar</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_29.jpg" data-alt="Enviar evaluación Al llegar a la última pregunta, el botón Finalizar de color rojo será visible. Presionalo para completar">
+                                                    <img src="images\ii3FY_29.jpg" alt="{{stepAltText28}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-38" data-type="step" data-step-index="9" data-section-index="9">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">9.9</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Resultados de evaluación</h3>
+                                        <div class="step-description"><p>Al enviar la evaluación recibirás la nota. En caso de ser reprobada, puedes reintentar presionando sobre la tarjeta y seleccionar "Iniciar"</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_30.jpg" data-alt="Resultados de evaluación Al enviar la evaluación recibirás la nota. En caso de ser reprobada, puedes reintentar presionando sobre la tarjeta y seleccionar Iniciar">
+                                                    <img src="images\ii3FY_30.jpg" alt="{{stepAltText29}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section>
+                        </div>
+                    </div>
+                </section><section class="accordion" data-accordion-index="9" id="anchor-39">
+                    <button type="button" class="accordion-trigger" aria-expanded="false">
+                        <div class="accordion-trigger-left">
+                            <div class="accordion-trigger-num">10</div>
+                            <div class="accordion-trigger-text">
+                                <div class="accordion-trigger-eyebrow">Sección 10</div>
+                                <h2 class="accordion-trigger-title"><span class='section-heading'>Descargar certificado</span></h2></div>
+                        </div>
+                        <div class="accordion-trigger-right">
+                            <span class="accordion-count">3 pasos</span>
+                            <span class="accordion-chevron" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </div>
+                    </button>
+                    <div class="accordion-panel">
+                        <div class="accordion-panel-inner">
+                            
+                            <section class="step-card" id="anchor-40" data-type="step" data-step-index="1" data-section-index="10">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">10.1</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Descargar certificado</h3>
+                                        <div class="step-description"><p>1. Accede al Tab Mi Progreso</p><p>2. En Mi progreso presiona sobre la tarjeta "Certificados"</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_31.jpg" data-alt="Descargar certificado 1. Accede al Tab Mi Progreso
+2. En Mi progreso presiona sobre la tarjeta Certificados">
+                                                    <img src="images\ii3FY_31.jpg" alt="{{stepAltText30}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-41" data-type="step" data-step-index="2" data-section-index="10">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">10.2</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Selecciona certificados</h3>
+                                        <div class="step-description"><p>Puedes seleccionar:</p><p>1. Certificados de finalización de cursos</p><p>2. Certificados de logros por aprobar evaluaciones</p><p>3. Para ver un certificado presiona sobre su tarjeta</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_32.jpg" data-alt="Selecciona certificados Puedes seleccionar:
+1. Certificados de finalización de cursos
+2. Certificados de logros por aprobar evaluaciones
+3. Para ver un certificado presiona sobre su tarjeta">
+                                                    <img src="images\ii3FY_32.jpg" alt="{{stepAltText31}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section><section class="step-card" id="anchor-42" data-type="step" data-step-index="3" data-section-index="10">
+                                    <div class="step-card-rail">
+                                        <div class="step-number">10.3</div>
+                                    </div>
+                                    <div class="step-card-body">
+                                        <h3 class="step-title">Detalle del certificado</h3>
+                                        <div class="step-description"><p>Dentro puedes visualizar el detalle del certificado:</p><p>1. Imagen del certificado</p><p>2. Descargar imagen del certificado</p><p>3. Compartir el certificado</p></div>
+                                        <figure class="step-figure">
+                                                <button type="button" class="step-figure-button" data-img="images\ii3FY_33.jpg" data-alt="Detalle del certificado Dentro puedes visualizar el detalle del certificado:
+1. Imagen del certificado
+2. Descargar imagen del certificado
+3. Compartir el certificado">
+                                                    <img src="images\ii3FY_33.jpg" alt="{{stepAltText32}}" loading="lazy" />
+                                                    <span class="step-figure-zoom" aria-hidden="true">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                                    </span>
+                                                </button>
+                                            </figure>
+                                    </div>
+                                </section>
+                        </div>
+                    </div>
+                </section>
+        </article>
 
-          const checkbox = document.getElementById(`step${currentStep}-check`);
-          const errorMsg = document.getElementById(`step${currentStep}-error`);
-          if (checkbox && !checkbox.checked) {
-            errorMsg.style.display = "block";
-            // Desplazar la vista al mensaje de error
-            errorMsg.scrollIntoView({ behavior: "smooth", block: "center" });
-          } else {
-            if (errorMsg) errorMsg.style.display = "none";
-            if (currentStep < totalSteps) {
-              localStorage.setItem("currentStep", ++currentStep);
-              updateSteps();
-            }
-          }
-        });
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-title">Sistema de Gestión del Aprendizaje</div>
+                
+                <div class="footer-meta">
+                    <button type="button" class="footer-back-top" id="backToTop">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                        Volver al inicio
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </main>
 
-        btnPrev.addEventListener("click", () => {
-          if (currentStep > 1) {
-            localStorage.setItem("currentStep", --currentStep);
-            updateSteps();
-          }
-        });
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <img id="lightboxImg" src="" alt="" />
+    </div>
 
-        btnRestart.addEventListener("click", () => {
-          localStorage.removeItem("currentStep");
-          currentStep = 0;
-          document.querySelectorAll("input[type='checkbox']").forEach(chk => (chk.checked = false));
-          updateSteps();
-        });
-
-        startBtn.addEventListener("click", () => {
-          localStorage.setItem("currentStep", (currentStep = 1));
-          updateSteps();
-        });
-
-        const updateSteps = () => {
-          if (currentStep === 0) {
-            introContent.style.display = "block";
-            stepNav.style.display = "none";
-            stepContent.style.display = "none";
-            btnPrev.style.display = "none";
-            btnNext.style.display = "none";
-            btnRestart.style.display = "none";
-          } else {
-            introContent.style.display = "none";
-            stepNav.style.display = "flex";
-            stepContent.style.display = "block";
-            btnPrev.style.display = "inline-block";
-            btnNext.style.display = "inline-block";
-            btnRestart.style.display = "inline-block";
-            for (let i = 1; i <= totalSteps; i++) {
-              const navLink = document.getElementById(`step-${i}`);
-              const contentCard = document.getElementById(`content-${i}`);
-              navLink.classList.remove("active", "disabled", "text-success");
-              if (i < currentStep) {
-                navLink.classList.add("text-success");
-              } else if (i === currentStep) {
-                navLink.classList.add("active");
-              } else {
-                navLink.classList.add("disabled");
-              }
-              if (contentCard) {
-                contentCard.classList.toggle("d-none", i !== currentStep);
-              }
-            }
-            btnPrev.disabled = currentStep === 1;
-            btnNext.disabled = currentStep === totalSteps;
-            renderFAQs();
-          }
-        };
-
-        // Cargar FAQs y actualizar los pasos
-        loadFAQs();
-        updateSteps();
-
-        // Funcionalidad para abrir imágenes en tamaño completo
-        const carouselImages = document.querySelectorAll('.carousel-item img');
-        const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
-        const modalImage = document.getElementById('modalImage');
-        const imageModalLabel = document.getElementById('imageModalLabel');
-
-        carouselImages.forEach(img => {
-          img.addEventListener('click', () => {
-            modalImage.src = img.src;
-            modalImage.alt = img.alt;
-            imageModalLabel.textContent = img.alt;
-            imageModal.show();
-          });
-        });
-      });
-    </script>
-  </body>
+    <script src="css/script.js"></script>
+</body>
 </html>
